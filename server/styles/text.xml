@@ -1,0 +1,9 @@
+<Map minimum-version="2.0.0">
+<Style name="text">
+  <Rule>
+    <!-- only show labels at [zoom > 5] -->
+    <MaxScaleDenominator>12500000</MaxScaleDenominator>
+    <TextSymbolizer face-name="DejaVu Sans Book" name="[english_name]" size="10" halo-radius="1" wrap-width="50" dy="10" placement="interior" />
+  </Rule>
+</Style>
+</Map>

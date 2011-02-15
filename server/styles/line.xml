@@ -1,0 +1,8 @@
+<Map minimum-version="2.0.0">
+<Style name="line">
+  <Rule>
+    <LineSymbolizer stroke="lightgreen" stroke-width="3" />
+    <LineSymbolizer stroke="green" stroke-width="1.5" />
+  </Rule>
+</Style>
+</Map>

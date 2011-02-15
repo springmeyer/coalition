@@ -1,0 +1,60 @@
+<html>
+  <head>
+    <script type="text/javascript" src="http://polymaps.org/polymaps.min.js"></script>
+    <style type="text/css">
+    
+      html {
+        font-family: "Lucida Grande", Verdana, Arial, sans-serif;
+        height: 100%;
+      }
+      
+      body {
+        height: 85%;
+        margin: 0;
+        bottom: 0px;
+      }
+      
+      top {
+        padding-left:15px;
+        padding-right:15px;
+        height: 10%;
+        top: 0px;
+        border:solid 1px;
+      }
+
+    </style>
+  </head>
+
+  <div id="top" >
+
+     <div style="float:left;padding-left:15px;width:30%;">
+     <p>Demo of sending arbitrary SQL and Styles to Mapnik for dynamic tile generation</p>
+     </div>
+
+     <div style="float:left;padding:5px;width:10%">
+    Style:
+    <form id="geom_type">
+    <input type="radio" onchange="update_tiles();" name="type" value="point" checked="checked" /> Point<br />
+    <input type="radio" onchange="update_tiles();" name="type" value="polygon" /> Polygon <br />
+    <input type="radio" onchange="update_tiles();" name="type" value="line" /> Line <br />
+    </form>
+    </div>
+
+     <div style="float:right;padding:5px;width:55%;font-size:smaller;">
+     <input type="search" autosave="bsn_srch" results="50" size="100" id="q" value="points9" onchange="update_tiles();">
+     <button onclick="update_tiles();" type="submit">Submit</button>
+      Sample Queries: <a href="#" onclick="setVal(this.innerHTML);return false">points9</a> | <a href="#" onclick="setVal(this.innerHTML);return false">polygons9</a>
+      <br />
+      <a href="#" onclick="setVal(this.innerHTML);return false">(Select * from points9 where marine = 't') as t</a>
+      <br />
+      <a href="#" onclick="setVal(this.innerHTML);return false">(Select * from polygons9 where marine = 'f') as t</a>
+      <br />
+     </div>
+
+  </div>
+
+  <body id="map">
+    <script type="text/javascript" src="map.js"></script>
+  </body>
+
+</html>

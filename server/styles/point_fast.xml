@@ -1,0 +1,11 @@
+<Map>
+<Style name="point">
+
+  <!-- sprites render fastest -->
+  
+ <Rule>
+    <PointSymbolizer file="point.png" allow-overlap="true" />
+  </Rule>
+
+</Style>
+</Map>

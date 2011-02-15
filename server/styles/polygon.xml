@@ -1,0 +1,7 @@
+<Map minimum-version="2.0.0">
+<Style name="polygon">
+  <Rule>
+    <PolygonSymbolizer fill="darkred" fill-opacity=".5" />
+  </Rule>
+</Style>
+</Map>
