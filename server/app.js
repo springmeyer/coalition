@@ -52,7 +52,7 @@ module.exports.server = http.createServer(function(req, res) {
           map.buffer_size(50);
           var layer = new mapnik.Layer('tile', mercator.srs);
           try {
-              settings.postgis.table = query.sql;
+              settings.postgis.table = unescape(query.sql);
               var postgis = new mapnik.Datasource(settings.postgis);
               layer.datasource = postgis;
               styles = [query.style];

@@ -18,7 +18,7 @@ map.add(po.image()
     .hosts(['1', '2', '3', '4'])));
 
 
-var tile_url = 'http://localhost:3000/?x={X}&y={Y}&z={Z}';
+var tile_url = '?x={X}&y={Y}&z={Z}';
 
 // local tile server
 var layer = po.image()
@@ -44,7 +44,7 @@ var update_tiles = function() {
      style = 'polygon';
   if (document.forms[0][2].checked)
      style = 'line';
-  layer.url(po.url(tile_url + '&sql=' + sql + '&style=' + style))
+  layer.url(po.url(tile_url + '&sql=' + escape(sql) + '&style=' + style))
      .reload();
   console.log(sql);
 };
